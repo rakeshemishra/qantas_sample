@@ -16,6 +16,9 @@
 		16E3E72A29A54BE90078D8BD /* QantasAirportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E72929A54BE90078D8BD /* QantasAirportsTests.swift */; };
 		16E3E73429A54BE90078D8BD /* QantasAirportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E73329A54BE90078D8BD /* QantasAirportsUITests.swift */; };
 		16E3E73629A54BE90078D8BD /* QantasAirportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E73529A54BE90078D8BD /* QantasAirportsUITestsLaunchTests.swift */; };
+		16E3E74829A54D040078D8BD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74529A54D040078D8BD /* NetworkManager.swift */; };
+		16E3E74929A54D040078D8BD /* RequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74629A54D040078D8BD /* RequestCallback.swift */; };
+		16E3E74A29A54D040078D8BD /* OfflineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74729A54D040078D8BD /* OfflineService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		16E3E72F29A54BE90078D8BD /* QantasAirportsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QantasAirportsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E3E73329A54BE90078D8BD /* QantasAirportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QantasAirportsUITests.swift; sourceTree = "<group>"; };
 		16E3E73529A54BE90078D8BD /* QantasAirportsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QantasAirportsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		16E3E74529A54D040078D8BD /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		16E3E74629A54D040078D8BD /* RequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCallback.swift; sourceTree = "<group>"; };
+		16E3E74729A54D040078D8BD /* OfflineService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,8 @@
 		16E3E71129A54BE80078D8BD /* QantasAirports */ = {
 			isa = PBXGroup;
 			children = (
-				16E3E71229A54BE80078D8BD /* AppDelegate.swift */,
-				16E3E71429A54BE80078D8BD /* SceneDelegate.swift */,
+				16E3E74329A54CD90078D8BD /* Service */,
+				16E3E74229A54CBE0078D8BD /* AppAndSceneDelegate */,
 				16E3E71629A54BE80078D8BD /* ViewController.swift */,
 				16E3E71829A54BE80078D8BD /* Main.storyboard */,
 				16E3E71B29A54BE90078D8BD /* Assets.xcassets */,
@@ -125,6 +131,33 @@
 				16E3E73529A54BE90078D8BD /* QantasAirportsUITestsLaunchTests.swift */,
 			);
 			path = QantasAirportsUITests;
+			sourceTree = "<group>";
+		};
+		16E3E74229A54CBE0078D8BD /* AppAndSceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				16E3E71229A54BE80078D8BD /* AppDelegate.swift */,
+				16E3E71429A54BE80078D8BD /* SceneDelegate.swift */,
+			);
+			path = AppAndSceneDelegate;
+			sourceTree = "<group>";
+		};
+		16E3E74329A54CD90078D8BD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				16E3E74429A54CE00078D8BD /* backend */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		16E3E74429A54CE00078D8BD /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				16E3E74529A54D040078D8BD /* NetworkManager.swift */,
+				16E3E74729A54D040078D8BD /* OfflineService.swift */,
+				16E3E74629A54D040078D8BD /* RequestCallback.swift */,
+			);
+			path = backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E3E74829A54D040078D8BD /* NetworkManager.swift in Sources */,
 				16E3E71729A54BE80078D8BD /* ViewController.swift in Sources */,
+				16E3E74929A54D040078D8BD /* RequestCallback.swift in Sources */,
+				16E3E74A29A54D040078D8BD /* OfflineService.swift in Sources */,
 				16E3E71329A54BE80078D8BD /* AppDelegate.swift in Sources */,
 				16E3E71529A54BE80078D8BD /* SceneDelegate.swift in Sources */,
 			);
