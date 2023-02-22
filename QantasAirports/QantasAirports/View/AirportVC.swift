@@ -71,11 +71,22 @@ class AirportVC: UIViewController {
         )
         loadingActivityIndicator.removeFromSuperview()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            if let indexPath = airportTable.indexPathForSelectedRow {
+                print(viewModel.airPortDetailsForRow(indexPath: indexPath.row)?.airportName ?? "")
+                let controller = segue.destination as? AirportDetailsVC
+                controller?.airportName = viewModel.airPortDetailsForRow(indexPath: indexPath.row)?.airportName ?? ""
+            }
+        }
+    }
 }
 
 extension AirportVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Table row selected")
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showDetails", sender: nil)
     }
 }
 
