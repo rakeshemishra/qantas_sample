@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164CEDA629A5548B00D408DE /* AirportData.json in Resources */ = {isa = PBXBuildFile; fileRef = 164CEDA529A5548B00D408DE /* AirportData.json */; };
+		164CEDA729A5548B00D408DE /* AirportData.json in Resources */ = {isa = PBXBuildFile; fileRef = 164CEDA529A5548B00D408DE /* AirportData.json */; };
 		16E3E71329A54BE80078D8BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E71229A54BE80078D8BD /* AppDelegate.swift */; };
 		16E3E71529A54BE80078D8BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E71429A54BE80078D8BD /* SceneDelegate.swift */; };
-		16E3E71729A54BE80078D8BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E71629A54BE80078D8BD /* ViewController.swift */; };
 		16E3E71A29A54BE80078D8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E3E71829A54BE80078D8BD /* Main.storyboard */; };
 		16E3E71C29A54BE90078D8BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16E3E71B29A54BE90078D8BD /* Assets.xcassets */; };
 		16E3E71F29A54BE90078D8BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E3E71D29A54BE90078D8BD /* LaunchScreen.storyboard */; };
@@ -19,6 +20,15 @@
 		16E3E74829A54D040078D8BD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74529A54D040078D8BD /* NetworkManager.swift */; };
 		16E3E74929A54D040078D8BD /* RequestCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74629A54D040078D8BD /* RequestCallback.swift */; };
 		16E3E74A29A54D040078D8BD /* OfflineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74729A54D040078D8BD /* OfflineService.swift */; };
+		16E3E74D29A54E450078D8BD /* AirportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74B29A54E450078D8BD /* AirportService.swift */; };
+		16E3E74E29A54E450078D8BD /* AirportRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E74C29A54E450078D8BD /* AirportRepository.swift */; };
+		16E3E75429A54EA90078D8BD /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E75229A54EA90078D8BD /* AlertManager.swift */; };
+		16E3E75529A54EA90078D8BD /* AirportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E75329A54EA90078D8BD /* AirportVC.swift */; };
+		16E3E75929A54EB10078D8BD /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E75729A54EB10078D8BD /* AirportModel.swift */; };
+		16E3E75B29A54ECF0078D8BD /* AirportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E75A29A54ECF0078D8BD /* AirportViewModel.swift */; };
+		16E3E75E29A550130078D8BD /* FakeAirportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E75D29A550130078D8BD /* FakeAirportService.swift */; };
+		16E3E76129A5501D0078D8BD /* AirportRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E75F29A5501D0078D8BD /* AirportRepositoryTest.swift */; };
+		16E3E76229A5501D0078D8BD /* AirportViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3E76029A5501D0078D8BD /* AirportViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164CEDA529A5548B00D408DE /* AirportData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AirportData.json; sourceTree = "<group>"; };
 		16E3E70F29A54BE80078D8BD /* QantasAirports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QantasAirports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E3E71229A54BE80078D8BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E3E71429A54BE80078D8BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16E3E71629A54BE80078D8BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16E3E71929A54BE80078D8BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16E3E71B29A54BE90078D8BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16E3E71E29A54BE90078D8BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +65,15 @@
 		16E3E74529A54D040078D8BD /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		16E3E74629A54D040078D8BD /* RequestCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCallback.swift; sourceTree = "<group>"; };
 		16E3E74729A54D040078D8BD /* OfflineService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineService.swift; sourceTree = "<group>"; };
+		16E3E74B29A54E450078D8BD /* AirportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportService.swift; sourceTree = "<group>"; };
+		16E3E74C29A54E450078D8BD /* AirportRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportRepository.swift; sourceTree = "<group>"; };
+		16E3E75229A54EA90078D8BD /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		16E3E75329A54EA90078D8BD /* AirportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportVC.swift; sourceTree = "<group>"; };
+		16E3E75729A54EB10078D8BD /* AirportModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
+		16E3E75A29A54ECF0078D8BD /* AirportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportViewModel.swift; sourceTree = "<group>"; };
+		16E3E75D29A550130078D8BD /* FakeAirportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAirportService.swift; sourceTree = "<group>"; };
+		16E3E75F29A5501D0078D8BD /* AirportRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportRepositoryTest.swift; sourceTree = "<group>"; };
+		16E3E76029A5501D0078D8BD /* AirportViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		164CEDA829A554A700D408DE /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				164CEDA529A5548B00D408DE /* AirportData.json */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		16E3E70629A54BE80078D8BD = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +132,12 @@
 		16E3E71129A54BE80078D8BD /* QantasAirports */ = {
 			isa = PBXGroup;
 			children = (
+				164CEDA829A554A700D408DE /* resource */,
+				16E3E75129A54E7D0078D8BD /* ViewModel */,
+				16E3E75029A54E760078D8BD /* View */,
+				16E3E74F29A54E650078D8BD /* Model */,
 				16E3E74329A54CD90078D8BD /* Service */,
 				16E3E74229A54CBE0078D8BD /* AppAndSceneDelegate */,
-				16E3E71629A54BE80078D8BD /* ViewController.swift */,
 				16E3E71829A54BE80078D8BD /* Main.storyboard */,
 				16E3E71B29A54BE90078D8BD /* Assets.xcassets */,
 				16E3E71D29A54BE90078D8BD /* LaunchScreen.storyboard */,
@@ -119,6 +149,9 @@
 		16E3E72829A54BE90078D8BD /* QantasAirportsTests */ = {
 			isa = PBXGroup;
 			children = (
+				16E3E75F29A5501D0078D8BD /* AirportRepositoryTest.swift */,
+				16E3E76029A5501D0078D8BD /* AirportViewModelTest.swift */,
+				16E3E75C29A54FD00078D8BD /* MockService */,
 				16E3E72929A54BE90078D8BD /* QantasAirportsTests.swift */,
 			);
 			path = QantasAirportsTests;
@@ -145,6 +178,8 @@
 		16E3E74329A54CD90078D8BD /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				16E3E74C29A54E450078D8BD /* AirportRepository.swift */,
+				16E3E74B29A54E450078D8BD /* AirportService.swift */,
 				16E3E74429A54CE00078D8BD /* backend */,
 			);
 			path = Service;
@@ -158,6 +193,39 @@
 				16E3E74629A54D040078D8BD /* RequestCallback.swift */,
 			);
 			path = backend;
+			sourceTree = "<group>";
+		};
+		16E3E74F29A54E650078D8BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16E3E75729A54EB10078D8BD /* AirportModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16E3E75029A54E760078D8BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16E3E75329A54EA90078D8BD /* AirportVC.swift */,
+				16E3E75229A54EA90078D8BD /* AlertManager.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16E3E75129A54E7D0078D8BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				16E3E75A29A54ECF0078D8BD /* AirportViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		16E3E75C29A54FD00078D8BD /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				16E3E75D29A550130078D8BD /* FakeAirportService.swift */,
+			);
+			path = MockService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +335,7 @@
 				16E3E71F29A54BE90078D8BD /* LaunchScreen.storyboard in Resources */,
 				16E3E71C29A54BE90078D8BD /* Assets.xcassets in Resources */,
 				16E3E71A29A54BE80078D8BD /* Main.storyboard in Resources */,
+				164CEDA629A5548B00D408DE /* AirportData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164CEDA729A5548B00D408DE /* AirportData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E3E75929A54EB10078D8BD /* AirportModel.swift in Sources */,
+				16E3E75529A54EA90078D8BD /* AirportVC.swift in Sources */,
+				16E3E75B29A54ECF0078D8BD /* AirportViewModel.swift in Sources */,
 				16E3E74829A54D040078D8BD /* NetworkManager.swift in Sources */,
-				16E3E71729A54BE80078D8BD /* ViewController.swift in Sources */,
 				16E3E74929A54D040078D8BD /* RequestCallback.swift in Sources */,
+				16E3E74E29A54E450078D8BD /* AirportRepository.swift in Sources */,
 				16E3E74A29A54D040078D8BD /* OfflineService.swift in Sources */,
 				16E3E71329A54BE80078D8BD /* AppDelegate.swift in Sources */,
 				16E3E71529A54BE80078D8BD /* SceneDelegate.swift in Sources */,
+				16E3E74D29A54E450078D8BD /* AirportService.swift in Sources */,
+				16E3E75429A54EA90078D8BD /* AlertManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +379,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E3E75E29A550130078D8BD /* FakeAirportService.swift in Sources */,
+				16E3E76129A5501D0078D8BD /* AirportRepositoryTest.swift in Sources */,
+				16E3E76229A5501D0078D8BD /* AirportViewModelTest.swift in Sources */,
 				16E3E72A29A54BE90078D8BD /* QantasAirportsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

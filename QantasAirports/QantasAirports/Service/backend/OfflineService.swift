@@ -10,7 +10,6 @@ import Foundation
 class OfflineService {
     
     internal func offlineData<T: Decodable>(using decodingType: T.Type) -> Data? {
-        let fileName = String(describing: decodingType)
         if let path = Bundle.main.path(forResource: "AirportData", ofType: "json") {
             return try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         }
