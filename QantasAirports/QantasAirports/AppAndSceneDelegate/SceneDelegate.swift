@@ -10,22 +10,22 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-       
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        
         let airportRepo = AirportRepository(AirportService())
         let vm = AirportViewModel(airportRepository: airportRepo)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        window?.rootViewController = storyboard.instantiateViewController(identifier: "AirportVC", creator: { coder in
-            AirportVC(coder: coder, viewModel: vm)
-        })
-
+        var airportVC = storyboard.instantiateViewController(identifier: "AirportVC", creator: { coder in
+            AirportVC(coder: coder, viewModel: vm)})
+        
+        let navController = UINavigationController(rootViewController: airportVC)
+        window?.rootViewController = navController
+        
         window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
