@@ -60,7 +60,12 @@ class AirportVC: UIViewController {
     }
     
     func updateViews(isSuccess: Bool) {
-        isSuccess ? airportTable.reloadData() : AlertManager.shared.showSimpleAlert(
+        isSuccess ? airportTable.reloadData() : showAlert()
+        loadingActivityIndicator.removeFromSuperview()
+    }
+    
+    func showAlert() {
+        AlertManager.shared.showSimpleAlert(
             title: "Network Error",
             msg: "Please try again!",
             viewController: self, action: { [weak self] (_) in
@@ -69,7 +74,6 @@ class AirportVC: UIViewController {
                 })
             }
         )
-        loadingActivityIndicator.removeFromSuperview()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
