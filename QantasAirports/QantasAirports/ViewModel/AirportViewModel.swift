@@ -11,6 +11,10 @@ class AirportViewModel {
 
     private var airportModel: AirportModel?
     private let airportRepository: AirportDataSource
+    
+    var numberOfRows: Int {
+        return airportModel?.count ?? 0
+    }
 
     init(airportRepository: AirportRepository) {
         self.airportRepository = airportRepository
@@ -40,14 +44,6 @@ class AirportViewModel {
                 debugPrint(error.localizedDescription)
             }
         }
-    }
-    
-    func updateModel() -> AirportModel? {
-        return airportModel;
-    }
-    
-    func numberOfRows() -> Int {
-        return airportModel?.count ?? 0
     }
     
     func airPortDetailsForRow(indexPath: Int) -> AirportModelElement? {

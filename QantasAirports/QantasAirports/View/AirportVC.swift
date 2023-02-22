@@ -75,7 +75,6 @@ class AirportVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
             if let indexPath = airportTable.indexPathForSelectedRow {
-                print(viewModel.airPortDetailsForRow(indexPath: indexPath.row)?.airportName ?? "")
                 let controller = segue.destination as? AirportDetailsVC
                 controller?.airportName = viewModel.airPortDetailsForRow(indexPath: indexPath.row)?.airportName ?? ""
             }
@@ -85,8 +84,8 @@ class AirportVC: UIViewController {
 
 extension AirportVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showDetails", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -97,7 +96,7 @@ extension AirportVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows()
+        return viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

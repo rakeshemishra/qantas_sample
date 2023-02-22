@@ -15,7 +15,6 @@ class AirportDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("airportName: \(airportName)")
         nameLabel.text = airportName
         // Do any additional setup after loading the view.
     }

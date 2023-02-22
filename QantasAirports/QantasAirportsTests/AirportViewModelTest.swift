@@ -46,13 +46,8 @@ final class AirportViewModelTest: XCTestCase {
         waitForExpectations(timeout: 40, handler: nil)
     }
     
-    func testUpdateModel() {
-        let model = viewModel?.updateModel()
-        XCTAssertNil(model)
-    }
-    
     func testNumberOfRows() {
-        let rows = viewModel?.numberOfRows()
+        let rows = viewModel?.numberOfRows
         XCTAssertEqual(rows ?? 0, 0);
     }
 }
